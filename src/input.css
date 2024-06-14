@@ -114,7 +114,7 @@ body {
 .button {
   display: inline-block;
   margin: 5px;
-  padding: 10px 20px;
+  padding: 10px 100px;
   border-radius: 25px;
   text-align: center;
   text-decoration: none;
@@ -152,6 +152,25 @@ body {
   text-align: center;
   font-family: Arial, sans-serif;
   font-size: 12px;
-  color: #9aa0a6;
+  color: #fff;
   margin-top: 10px;
+}
+
+.transition-max-height {
+  transition: max-height 0.5s ease-in-out;
+}
+
+/* Adjustments for tablets */
+@media (max-width: 768px) {
+  .button {
+    padding: 10px 50px; /* Reduce horizontal padding */
+  }
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 480px) {
+  .button {
+    padding: 10px 20px; /* Further reduce horizontal padding */
+    font-size: 12px;    /* Adjust font size for better readability on smaller screens */
+  }
 }

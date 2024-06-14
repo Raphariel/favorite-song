@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../src/input.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mx-auto text-white px-4 py-16">
+      <h1 class="text-header font-bold mb-4 text-center">
+        Play your favorite songs.
+      </h1>
+      <p class="text-lg text-center mb-8">
+        You’ll have all the tools you need to make sure you never miss a beat.
+        <a href="#" class="font-bold text-red-600 underline decoration-red-600"
+          >Try the demo</a
+        >
+      </p>
+
+      <div class="flex flex-col lg:flex-row justify-center items-center">
+        <div class="flex justify-center items-center w-full mx-auto">
+          <div class="flex flex-col items-center md:flex-row">
+            <div class="space-y-6">
+              <a
+                href="#"
+                class="flex items-start space-x-4 bg-element rounded-lg p-4 active-button"
+                onclick="openDescription('../playlist-video/playlist.mp4', 'description', 'anotherDescription', 'troubleSpotId', 'timingId', 'desktopId'); setActiveButton('showDescriptionButton');"
+                id="showDescriptionButton"
+              >
+                <div class="text-red-500 text-2xl flex-shrink-0">
+                  <img src="../icons/music.svg" alt="playlist" />
+                </div>
+                <div class="flex flex-col flex-grow">
+                  <h2 class="text-xl font-bold">1000+ popular songs.</h2>
+                  <p
+                    class="description mx-0 mt-1 sm:mt-2 text-sm overflow-hidden max-h-0 hidden"
+                    style="max-width: 270px"
+                    id="description"
+                  >
+                    Get note-for-note song breakdowns for every style, era, and
+                    skill level.
+                  </p>
+                </div>
+              </a>
+
+              <a
+                href="#"
+                class="flex items-start space-x-4 bg-[#0c1524] rounded-lg p-4"
+                onclick="openDescription('../playlist-video/tempo.mp4', 'anotherDescription', 'description', 'troubleSpotId', 'timingId', 'desktopId'); setActiveButton('showAnotherDescriptionButton');"
+                id="showAnotherDescriptionButton"
+              >
+                <div class="text-red-500 text-2xl flex-shrink-0">
+                  <img src="../icons/tempo.svg" alt="Perfect Tempo" />
+                </div>
+                <div class="flex flex-col flex-grow">
+                  <h2 class="text-xl font-bold">Find the perfect tempo.</h2>
+                  <p
+                    class="description hidden mx-0 mt-1 sm:mt-2 text-sm overflow-hidden max-h-0"
+                    style="max-width: 270px"
+                    id="anotherDescription"
+                  >
+                    Slow down any section of a song to make those tricky bars
+                    easier.
+                  </p>
+                </div>
+              </a>
+
+              <a
+                href="#"
+                class="flex items-start space-x-4 bg-[#0c1524] rounded-lg p-4"
+                onclick="openDescription('../playlist-video/troublespot.mp4', 'troubleSpotId', 'description', 'anotherDescription', 'timingId', 'desktopId'); setActiveButton('showTroubleSpotIdButton');"
+                id="showTroubleSpotIdButton"
+              >
+                <div class="text-red-500 text-2xl flex-shrink-0">
+                  <img src="../icons/troublespot.svg" alt="Perfect Tempo" />
+                </div>
+                <div class="flex flex-col flex-grow">
+                  <h2 class="text-xl font-bold">Loop the trouble spots.</h2>
+                  <p
+                    class="description hidden mx-0 mt-1 sm:mt-2 text-sm overflow-hidden max-h-0"
+                    style="max-width: 270px"
+                    id="troubleSpotId"
+                  >
+                    Create practice loops to play-through those difficult parts
+                    over and over.
+                  </p>
+                </div>
+              </a>
+
+              <a
+                href="#"
+                class="flex items-start space-x-4 bg-[#0c1524] rounded-lg p-4"
+                onclick="openDescription('../playlist-video/timing.mp4', 'timingId', 'description', 'anotherDescription', 'troubleSpotId', 'desktopId'); setActiveButton('showTimingIdButton');"
+                id="showTimingIdButton"
+              >
+                <div class="text-red-500 text-2xl flex-shrink-0">
+                  <img src="../icons/timing.svg" alt="Perfect Tempo" />
+                </div>
+                <div class="flex flex-col flex-grow">
+                  <h2 class="text-xl font-bold">Improve your timing.</h2>
+                  <p
+                    class="description hidden mx-0 mt-1 sm:mt-2 text-sm overflow-hidden max-h-0"
+                    style="max-width: 270px"
+                    id="timingId"
+                  >
+                    Use the built-in metronome – your new best friend for
+                    difficult rhythms.
+                  </p>
+                </div>
+              </a>
+
+              <a
+                href="#"
+                class="flex items-start space-x-4 bg-[#0c1524] rounded-lg p-4"
+                onclick="openDescription('../playlist-video/image/desktop.png', 'desktopId', 'description', 'anotherDescription', 'troubleSpotId', 'timingId'); setActiveButton('showDesktopIdButton');"
+                id="showDesktopIdButton"
+              >
+                <div class="text-red-500 text-2xl flex-shrink-0">
+                  <img src="../icons/desktop.svg" alt="Desktop Access" />
+                </div>
+                <div class="flex flex-col flex-grow">
+                  <h2 class="text-xl font-bold">Take your songs anywhere.</h2>
+                  <p
+                    class="description hidden mx-0 mt-1 sm:mt-2 text-sm overflow-hidden max-h-0"
+                    style="max-width: 270px"
+                    id="desktopId"
+                  >
+                    Accessible on any device, or printable, so you can play any
+                    song, any time.
+                  </p>
+                </div>
+              </a>
+
+              <!-- Add similar buttons for other actions if needed -->
+            </div>
+            <div
+              class="color-element w-96 text-white flex justify-end items-end ml-4 mt-6 md:mt-0"
+            >
+              <div
+                class="flex flex-col md:flex-row items-center justify-center gap-4 p-4"
+              >
+                <div
+                  class="relative sm:order-1 rounded-l-xl overflow-hidden py-10 pl-10 max-w-xs sm:max-w-full"
+                >
+                  <video id="videoPlayer" width="490" autoplay muted loop>
+                    <source
+                      id="videoSource"
+                      src="../playlist-video/playlist.mp4"
+                      type="video/mp4"
+                      class="w-full hidden media-toggle rounded-l-xl overflow-hidden"
+                    />
+                  </video>
+                  <img
+                    id="imageElement"
+                    src=""
+                    width="440"
+                    alt="Media Display"
+                    class="media-toggle hidden rounded-l-xl overflow-hidden"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center mt-12">
+        <a href="#" class="button button-outline">SEE SONGS LIST</a>
+        <a href="#" class="button button-solid flex items-center ml-4">
+          START FOR FREE
+          <i class="bi bi-arrow-right arrow ml-2"></i>
+        </a>
+      </div>
+      <p class="note">Songs included with Pianote+</p>
+    </div>
+
+    <footer>
+      <!-- Load your JavaScript file -->
+      <script src="../js/dropdown.js"></script>
+      <script src="../js/active.js"></script>
+    </footer>
+  </body>
+</html>
